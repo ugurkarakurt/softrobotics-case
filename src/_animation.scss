@@ -1,0 +1,196 @@
+:root {
+  --border-bg-purple: conic-gradient(#c239d7, #7a1f88, #c239d7, #fff, #c239d7);
+  --border-bg-red: conic-gradient(#d71d23, #6b191c, #d71d23, #fff, #d71d23);
+  --border-bg-lightBlue: conic-gradient(#09ecd1, #088879, #09ecd1, #fff, #09ecd1);
+  --border-bg-blue: conic-gradient(#0aa2eb, #075d85, #0aa2eb, #fff, #0aa2eb);
+  --border-bg-green: conic-gradient(#7bfe86, #408646, #7bfe86, #fff, #7bfe86);
+  --border-bg-orange: conic-gradient(#e99002, #835202, #e99002, #fff, #e99002);
+  --border-bg-yellow: conic-gradient(#dec235, #948125, #dec235, #fff, #dec235);
+  --border-bg-white: conic-gradient(#ffffff, #818181, #ffffff, #818181, #ffffff);
+}
+
+.rotating-border-card {
+  &::before {
+    content: "";
+    display: block;
+    width: calc(100% * 2);
+    padding-bottom: calc(100% * 2);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 100%;
+    z-index: -2;
+    animation: spin 2s linear infinite;
+  }
+
+  &.bg-purple {
+    &::before {
+      background: var(--border-bg-purple);
+    }
+
+    &:hover {
+      // box-shadow: 0 10px 20px #c239d731, 0 6px 6px #c239d731;
+
+      .name,
+      span {
+        color: #c239d7;
+      }
+    }
+  }
+
+  &.bg-red {
+    &::before {
+      background: var(--border-bg-red);
+    }
+
+    &:hover {
+      // box-shadow: 0 10px 20px #d71d2323, 0 6px 6px #d71d2323;
+
+      .name,
+      span {
+        color: #d71d23;
+      }
+    }
+  }
+
+  &.bg-lightBlue {
+    &::before {
+      background: var(--border-bg-lightBlue);
+    }
+
+    &:hover {
+      // box-shadow: 0 10px 20px #09ecd125, 0 6px 6px #09ecd125;
+
+      .name,
+      span {
+        color: #09ecd1;
+      }
+    }
+  }
+
+  &.bg-blue {
+    &::before {
+      background: var(--border-bg-blue);
+    }
+
+    &:hover {
+      // box-shadow: 0 10px 20px #0aa4eb29, 0 6px 6px #0aa4eb29;
+
+      .name,
+      span {
+        color: #0aa2eb;
+      }
+    }
+  }
+
+  &.bg-green {
+    &::before {
+      background: var(--border-bg-green);
+    }
+
+    &:hover {
+      // box-shadow: 0 10px 20px #7bfe862a, 0 6px 6px #7bfe862a;
+
+      .name,
+      span {
+        color: #7bfe86;
+      }
+    }
+  }
+
+  &.bg-orange {
+    &::before {
+      background: var(--border-bg-orange);
+    }
+
+    &:hover {
+      // box-shadow: 0 10px 20px #e9910226, 0 6px 6px #e9910226;
+
+      .name,
+      span {
+        color: #e99002;
+      }
+    }
+  }
+
+  &.bg-yellow {
+    &::before {
+      background: var(--border-bg-yellow);
+    }
+
+    &:hover {
+      // box-shadow: 0 10px 20px #dec23521, 0 6px 6px #dec23521;
+
+      .name,
+      span {
+        color: #dec235;
+      }
+    }
+  }
+
+  &.bg-white {
+    &::before {
+      background: var(--border-bg-white);
+    }
+
+    &:hover {
+      // box-shadow: 0 10px 20px #ffffff2b, 0 6px 6px #ffffff2b;
+
+      .name,
+      span {
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@-ms-keyframes loading {
+  from {
+    -ms-transform: (0deg);
+  }
+
+  to {
+    -ms-transform: rotateY(1000deg);
+  }
+}
+
+@-moz-keyframes loading {
+  from {
+    -moz-transform: rotateY(0deg);
+  }
+
+  to {
+    -moz-transform: rotateY(1000deg);
+  }
+}
+
+@-webkit-keyframes loading {
+  from {
+    -webkit-transform: rotateY(0deg);
+  }
+
+  to {
+    -webkit-transform: rotateY(1000deg);
+  }
+}
+
+@keyframes loading {
+  from {
+    transform: rotateY(0deg);
+  }
+
+  to {
+    transform: rotateY(1000deg);
+  }
+}

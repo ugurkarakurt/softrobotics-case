@@ -1,0 +1,27 @@
+aside {
+  &.aside {
+    width: 90px;
+    background-color: #1a2036;
+    border-radius: 20px;
+    nav {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      a {
+        img {
+          filter: grayscale(1);
+
+          width: 40px;
+          height: 40px;
+        }
+        &.active {
+          img {
+            filter: grayscale(0);
+          }
+        }
+      }
+    }
+  }
+}
