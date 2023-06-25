@@ -2,7 +2,8 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
 const initialState = {
-  pokemons: []
+  pokemon: '',
+  title: 'PokeAPI'
 }
 
 export const getPokemons = createAsyncThunk('getPokemons', async () => {
@@ -12,16 +13,19 @@ export const getPokemons = createAsyncThunk('getPokemons', async () => {
 
 
 export const pokemonSlice = createSlice({
-  name: "pokemons",
+  name: "pokemon",
   initialState,
   reducers: {
-
+    title: (state, action) => {
+      state.title = action.payload
+    }
   },
   extraReducers: (builder) => {
     builder.addCase(getPokemons.fulfilled, (state, action) => {
-      state.pokemons = action.payload
+      state.pokemon = action.payload
     })
   }
 })
 
+export const { title } = pokemonSlice.actions;
 export default pokemonSlice.reducer

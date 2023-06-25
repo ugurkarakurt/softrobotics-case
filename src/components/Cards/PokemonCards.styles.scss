@@ -1,0 +1,9 @@
+.card-list {
+  padding: 30px;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  gap: 20px;
+  overflow-y: auto;
+  grid-template-columns: repeat(4, 1fr) !important;
+}

@@ -1,6 +1,8 @@
 aside {
   &.aside {
+    align-self: flex-start;
     width: 90px;
+    height: fit-content;
     background-color: #1a2036;
     border-radius: 20px;
     nav {
