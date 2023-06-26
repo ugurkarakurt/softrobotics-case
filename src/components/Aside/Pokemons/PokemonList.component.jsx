@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import loadingGif from './loading.gif'
 import { getPokemons } from '../../../redux/features/pokemon/pokemonSlice';
 import PokemonCard from '../../Cards/PokemonCard/PokemonCard.component';
+import { Scrollbars } from 'react-custom-scrollbars-2';
 
 export default function PokemonList() {
   const dispatch = useDispatch();
@@ -21,11 +22,11 @@ export default function PokemonList() {
           <img src={loadingGif} alt="" />
         </>
       ) : (
-        <>
+        <Scrollbars style={{ width: 180, height: 400 }}>
           {pokemon.results.map((result) => (
             <PokemonCard key={result.name} result={result} />
           ))}
-        </>
+        </Scrollbars>
       )}
     </nav>
   )

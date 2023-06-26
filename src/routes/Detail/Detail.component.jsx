@@ -6,6 +6,7 @@ import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { title } from '../../redux/features/pokemon/pokemonSlice';
 import PokemonDetail from '../../components/Detail/PokemonDetail.component';
+import { Scrollbars } from 'react-custom-scrollbars-2';
 
 export default function Detail() {
   const dispatch = useDispatch();
