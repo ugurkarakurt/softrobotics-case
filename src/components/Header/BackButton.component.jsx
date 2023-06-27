@@ -6,7 +6,9 @@ import { useSelector } from 'react-redux';
 
 export default function BackButton() {
   const { title } = useSelector(state => state.pokemon);
+  
   console.log(title);
+  
   const navigate = useNavigate();
   const goBack = () => {
     navigate(-1);

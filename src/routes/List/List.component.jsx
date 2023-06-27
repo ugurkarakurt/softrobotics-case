@@ -13,6 +13,7 @@ export default function List() {
   useEffect(() => {
     dispatch(title('Pokemon List'));
   }, []);
+
   return (
     <main className='list container d-flex justify-content-center align-items-center'>
       <div className='wrapper d-flex'>

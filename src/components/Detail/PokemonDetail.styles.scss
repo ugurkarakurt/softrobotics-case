@@ -5,6 +5,7 @@
     justify-content: center;
     align-items: stretch;
     padding: 0 30px 30px 30px;
+
     .detail-content {
       display: flex;
       justify-content: flex-start;
@@ -18,33 +19,52 @@
         justify-content: space-between;
         align-items: stretch;
         gap: 50px;
+
+        @media screen and (max-width: 991px) {
+          flex-direction: column;
+        }
+
         .image-wrapper {
+          @media screen and (max-width: 991px) {
+            display: flex;
+            justify-content: center;
+          }
+
           img {
             width: 300px;
             height: 300px;
+
+            @media screen and (max-width: 991px) {
+              flex-direction: column;
+            }
           }
         }
+
         .information {
           flex: 1 1;
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: flex-start;
+
           h1 {
             font-size: 30px;
             text-transform: uppercase;
             font-weight: bold;
             margin-bottom: 10px;
           }
+
           h2 {
             font-size: 20px;
             text-decoration: underline;
             margin-bottom: 10px;
           }
+
           .info {
             margin-bottom: 10px;
             display: flex;
             gap: 10px;
+
             h3 {
               font-size: 16px;
               text-transform: capitalize;
@@ -52,6 +72,7 @@
               display: flex;
               justify-content: space-between;
             }
+
             div {
               display: flex;
               gap: 5px;

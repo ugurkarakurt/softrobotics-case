@@ -9,7 +9,6 @@ import { Scrollbars } from 'react-custom-scrollbars-2';
 export default function PokemonList() {
   const dispatch = useDispatch();
   const { pokemon } = useSelector(state => state.pokemon);
-  console.log(pokemon);
 
   useEffect(() => {
     dispatch(getPokemons());

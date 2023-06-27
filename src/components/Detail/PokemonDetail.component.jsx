@@ -2,13 +2,9 @@ import React from 'react'
 import './PokemonDetail.styles.scss'
 import { useSelector } from 'react-redux';
 import loadingGif from '../Cards/img/loading.gif'
-import Table from 'react-bootstrap/Table';
-
-// import { getPokemon } from '../../redux/features/pokemon/pokemonSlice.js';
 
 export default function PokemonDetail() {
   const { poke } = useSelector(state => state.pokemon);
-  console.log(poke);
 
   return (
 
@@ -24,7 +20,7 @@ export default function PokemonDetail() {
               <img src={poke.sprites.other.dream_world.front_default} alt="" />
             </div>
             <div className="information">
-              <h1>{poke.name}</h1>
+              <h1 className='tavasapi'>{poke.name}</h1>
               <h2>Information</h2>
               <div className="types info">
                 <h3>Type <span>:</span> </h3>

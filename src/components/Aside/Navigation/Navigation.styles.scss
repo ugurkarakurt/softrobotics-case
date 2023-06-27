@@ -5,12 +5,23 @@ aside {
     height: fit-content;
     background-color: #1a2036;
     border-radius: 20px;
+
+    @media screen and (max-width: 991px) {
+      width: 100%;
+
+    }
+
     nav {
       padding: 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 20px;
+
+      @media screen and (max-width: 991px) {
+        flex-direction: row;
+      }
+
       a {
         img {
           filter: grayscale(1);
@@ -18,6 +29,7 @@ aside {
           width: 40px;
           height: 40px;
         }
+
         &.active {
           img {
             filter: grayscale(0);

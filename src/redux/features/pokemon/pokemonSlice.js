@@ -4,11 +4,11 @@ import axios from "axios";
 const initialState = {
   pokemon: '',
   poke: '',
-  title: 'PokeAPI',
+  title: 'Pokemon',
 }
 
-export const getPokemons = createAsyncThunk('getPokemons', async () => {
-  const { data } = await axios.get('https://pokeapi.co/api/v2/pokemon/');
+export const getPokemons = createAsyncThunk('getPokemons', async (url) => {
+  const { data } = await axios.get(url);
   return data;
 });
 
